@@ -10,13 +10,11 @@ class Solucion:
         inicio=0
         fin=len(alturas)-1
         actual=0
-        #print("comenzando")
         while(fin<len(alturas) and inicio<fin):
             if (alturas[inicio]>alturas[fin]):
                 actual = (fin-inicio) * alturas[fin]
             else:
                 actual = (fin-inicio) * alturas[inicio]
-            #print(f"Inicio: {inicio}, Fin: {fin}, Actual: {actual}, Maximo: {maximo}")
             # Actualizar el máximo si el área actual es mayor
             if actual > maximo:
                 maximo = actual
@@ -25,7 +23,6 @@ class Solucion:
                 inicio += 1
             else:
                 fin -= 1
-            #print(f"Nuevo Inicio: {inicio}, Nuevo Fin: {fin}, Maximo: {maximo}")
 
         return maximo
     
